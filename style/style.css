@@ -214,6 +214,11 @@ img{
 
 }
 
+
+.site-header__profile-link:active{
+  opacity: 0.6;
+}
+
 .site-header__profile-link:hover{
   border-color: var(--accent-color);
 }
@@ -223,7 +228,13 @@ img{
   height: 50px;
 }
 
-.site-header__cart-modal {
+
+.site-header__cart-modal{
+  display: none;
+}
+
+.site-header__cart-modal--open {
+  display: block;
   position: absolute;
   right: -76px;
   top: 94px;
@@ -239,7 +250,7 @@ img{
   background-color: #fff;
 }
 
-.shopping-cart__modal {
+.shopping-cart--modal {
   box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.503143);
 }
 
