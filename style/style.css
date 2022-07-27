@@ -320,7 +320,7 @@ img{
 }
 
 .item-cart-shopping-products__name {
-
+  text-transform: capitalize;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -354,4 +354,54 @@ color: var(--text-color-dark);
 
 .bold-cost{
 color:  var(--text-color-dark);
+}
+
+
+/* BUTTON */
+
+.button {
+  display: inline-block;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  color: #fff;
+  overflow: hidden ;
+  text-align: center;
+}
+
+.button--block{
+  display: flex;
+  width: 100%;
+}
+
+.button--wide{
+  min-width: 272px;
+}
+
+.button:hover{
+  background-color: var(--accent-color-hover);
+}
+
+.button:active{
+  transform: translateY(2px);
+}
+
+.button__inner {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 22px 20px 18px;
+}
+
+.button__text {
+}
+
+.button__prepend{
+  margin-right: 16px;
 }
