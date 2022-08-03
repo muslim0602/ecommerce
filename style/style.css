@@ -437,18 +437,55 @@ color:  var(--text-color-dark);
 }
 
 .picture__prime {
-  display: flex;
+  display: block;
   width: 445px;
+  height: 445px;
+  object-fit: cover;
+  border-radius: 15px;
   margin-bottom: 32px;
-  object-fit: contain;
+
+}
+
+.pictures__prime-button{
+  position: relative;
+  display: block;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  overflow: hidden;
   border-radius: 10px;
 }
 
-.pictures__list {
-  display: flex;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+
+.pictures__prime-button::after{
+  position: absolute;
+  content: " ";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+}
+
+.pictures__prime-button:hover::after{
+  opacity: 1;
+}
+
+.pictures__prime-button:active{
+  opacity: 0.6;
+}
+
+.pictures__item--active .pictures__prime-button::after{
+  opacity: 1;
+  border: 2px solid var(--accent-color);
+
+}
+
+.pictures__item{
+  flex-shrink: 0;
 }
 
 .pictures__item:not(:last-child) {
@@ -456,9 +493,10 @@ color:  var(--text-color-dark);
 }
 
 .pictures__img {
-  display: flex;
-  object-fit: contain;
+  display: block;
+  object-fit: cover;
   width: 88px;
+  height: 88px;
   border: 2px solid transparent;
   border-radius: 10px;
 }
@@ -468,6 +506,38 @@ color:  var(--text-color-dark);
   opacity: 0.6;
   cursor: pointer;
 }
+
+.pictures__list {
+  width: 100%;
+  max-width: 445px;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: auto;
+  scrollbar-color: var(--accent-color) var(--divider-color);
+  padding-bottom: 10px;
+
+}
+
+
+.pictures__list::-webkit-scrollbar {
+  width: 10px; /* Mostly for vertical scrollbars */
+  height: 10px; /* Mostly for horizontal scrollbars */
+}
+
+.pictures__list::-webkit-scrollbar-thumb { /* Foreground */
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+.pictures__list::-webkit-scrollbar-track { /* Background */
+  background: var(--divider-color);
+  border-radius: 5px;
+}
+
+
+
 
 .about-company {
   width: 445px;
