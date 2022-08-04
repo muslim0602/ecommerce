@@ -443,7 +443,6 @@ color:  var(--text-color-dark);
   object-fit: cover;
   border-radius: 15px;
   margin-bottom: 32px;
-
 }
 
 .pictures__prime-button{
@@ -483,6 +482,7 @@ color:  var(--text-color-dark);
   border: 2px solid var(--accent-color);
 
 }
+
 
 .pictures__item{
   flex-shrink: 0;
@@ -535,9 +535,6 @@ color:  var(--text-color-dark);
   background: var(--divider-color);
   border-radius: 5px;
 }
-
-
-
 
 .about-company {
   width: 445px;
