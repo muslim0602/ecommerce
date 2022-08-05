@@ -97,34 +97,41 @@
       <hero class="site-hero">
         <div class="site-hero__container container">
           <div class="pictures">
-            <img class="picture__prime" src="img/prime-img.png" alt="shoes img" width="445" height="445"
-              srcset="img/prime-img.png 1x, img/prime-img@2x.png 2x">
+            <div class="img-showcase">
+              <button class="lightshot" type="button" aria-label="open gallery"> </button>
+              <img class="picture__prime" src="img/prime-img.png" alt="shoes img" width="445" height="445"
+                srcset="img/prime-img.png 1x, img/prime-img@2x.png 2x">
+            </div>
             <ul class="pictures__list">
 
               <li class="pictures__item pictures__item--active">
-                <button class="pictures__prime-button js-pictures-prime-button" type="button" data-img-pictures-bog="img/prime-img.png" data-img-pictures-retina="img/prime-img@2x.png">
-                  <img class="pictures__img" src="img/prime-img.png" alt="picture img"
-                    width="88" height="88" srcset="img/prime-img.png 1x , img/prime-img@2x.png 2x">
-                  </button>
-                </li>
+                <button class="pictures__prime-button js-pictures-prime-button" type="button"
+                  data-img-pictures-bog="img/prime-img.png" data-img-pictures-retina="img/prime-img@2x.png">
+                  <img class="pictures__img" src="img/prime-img.png" alt="picture img" width="88" height="88"
+                    srcset="img/prime-img.png 1x , img/prime-img@2x.png 2x">
+                </button>
+              </li>
               <li class="pictures__item">
-                <button class="pictures__prime-button js-pictures-prime-button" type="button" data-img-pictures-bog="img/shoes-tree.png" data-img-pictures-retina="img/shoes-tree@2x.png">
-                  <img class="pictures__img" src="img/shoes-tree.png" alt="picture img"
-                    width="88" height="88" srcset="img/shoes-tree.png 1x , img/shoes-tree@2x.png 2x">
-                  </button>
-                </li>
+                <button class="pictures__prime-button js-pictures-prime-button" type="button"
+                  data-img-pictures-bog="img/shoes-tree.png" data-img-pictures-retina="img/shoes-tree@2x.png">
+                  <img class="pictures__img" src="img/shoes-tree.png" alt="picture img" width="88" height="88"
+                    srcset="img/shoes-tree.png 1x , img/shoes-tree@2x.png 2x">
+                </button>
+              </li>
               <li class="pictures__item">
-                <button class="pictures__prime-button js-pictures-prime-button" type="button" data-img-pictures-bog="img/shoes-paper.png" data-img-pictures-retina="img/shoes-paper@2x.png">
-                  <img class="pictures__img" src="img/shoes-paper.png" alt="picture img"
-                    width="88" height="88" srcset="img/shoes-paper.png 1x, img/shoes-paper@2x.png 2x">
-                  </button>
-                </li>
+                <button class="pictures__prime-button js-pictures-prime-button" type="button"
+                  data-img-pictures-bog="img/shoes-paper.png" data-img-pictures-retina="img/shoes-paper@2x.png">
+                  <img class="pictures__img" src="img/shoes-paper.png" alt="picture img" width="88" height="88"
+                    srcset="img/shoes-paper.png 1x, img/shoes-paper@2x.png 2x">
+                </button>
+              </li>
               <li class="pictures__item">
-                <button class="pictures__prime-button js-pictures-prime-button" type="button" data-img-pictures-bog="img/shoes-stone.png" data-img-pictures-retina="img/shoes-stone@@x.png">
-                  <img class="pictures__img" src="img/shoes-stone.png" alt="picture img"
-                    width="88" height="88" srcset="img/shoes-stone.png 2x ,img/shoes-stone@2x.png 2x">
-                  </button>
-                </li>
+                <button class="pictures__prime-button js-pictures-prime-button" type="button"
+                  data-img-pictures-bog="img/shoes-stone.png" data-img-pictures-retina="img/shoes-stone@2x.png">
+                  <img class="pictures__img" src="img/shoes-stone.png" alt="picture img" width="88" height="88"
+                    srcset="img/shoes-stone.png 2x ,img/shoes-stone@2x.png 2x">
+                </button>
+              </li>
 
             </ul>
 
@@ -166,6 +173,73 @@
       </hero>
     </div>
   </header>
+
+
+
+  <!-- LIGHTBOX -->
+
+  <div class="lightbox">
+    <div class="lightbox__inner">
+      <button class="lightbox__close " type="button" aria-label="Close lightbox">
+        <svg class="lightbox__close-icon" width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M20 2.857 17.143 0 10 7.143 2.857 0 0 2.857 7.143 10 0 17.143 2.857 20 10 12.857 17.143 20 20 17.143 12.857 10 20 2.857Z"
+            fill="currentColor" />
+        </svg>
+      </button>
+      <div class="pictures">
+        <div class="img-showcase img-showcase--lightbox">
+          <button class="pictures__controls pictures__controls--prev" type="button" aria-label="Previous">
+            <span class="img-showcase__control-inner">
+              <svg class="img-showcase__control" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m2 2 8 8-8 8" stroke="currentColor" stroke-width="3" />
+              </svg>
+            </span>
+          </button>
+          <button class="pictures__controls pictures__controls-next" type="button" aria-label="Next">
+            <span class="img-showcase__control-inner">
+              <svg class="img-showcase__control" width="13" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="m11 2-8 8 8 8" stroke="currentColor" stroke-width="3" />
+              </svg>
+            </span>
+          </button>
+          <img class="picture__prime" src="img/prime-img.png" alt="shoes img" width="445" height="445"
+            srcset="img/prime-img.png 1x, img/prime-img@2x.png 2x">
+        </div>
+        <ul class="pictures__list lightbox__list">
+          <li class="pictures__item pictures__item--active">
+            <button class="pictures__prime-button js-pictures-prime-button" type="button"
+              data-img-pictures-bog="img/prime-img.png" data-img-pictures-retina="img/prime-img@2x.png">
+              <img class="pictures__img" src="img/prime-img.png" alt="picture img" width="88" height="88"
+                srcset="img/prime-img.png 1x , img/prime-img@2x.png 2x">
+            </button>
+          </li>
+          <li class="pictures__item">
+            <button class="pictures__prime-button js-pictures-prime-button" type="button"
+              data-img-pictures-bog="img/shoes-tree.png" data-img-pictures-retina="img/shoes-tree@2x.png">
+              <img class="pictures__img" src="img/shoes-tree.png" alt="picture img" width="88" height="88"
+                srcset="img/shoes-tree.png 1x , img/shoes-tree@2x.png 2x">
+            </button>
+          </li>
+          <li class="pictures__item">
+            <button class="pictures__prime-button js-pictures-prime-button" type="button"
+              data-img-pictures-bog="img/shoes-paper.png" data-img-pictures-retina="img/shoes-paper@2x.png">
+              <img class="pictures__img" src="img/shoes-paper.png" alt="picture img" width="88" height="88"
+                srcset="img/shoes-paper.png 1x, img/shoes-paper@2x.png 2x">
+            </button>
+          </li>
+          <li class="pictures__item">
+            <button class="pictures__prime-button js-pictures-prime-button" type="button"
+              data-img-pictures-bog="img/shoes-stone.png" data-img-pictures-retina="img/shoes-stone@2x.png">
+              <img class="pictures__img" src="img/shoes-stone.png" alt="picture img" width="88" height="88"
+                srcset="img/shoes-stone.png 2x ,img/shoes-stone@2x.png 2x">
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <script src="js/main.js"></script>
 </body>
 

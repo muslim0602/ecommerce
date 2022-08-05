@@ -445,6 +445,12 @@ color:  var(--text-color-dark);
   margin-bottom: 32px;
 }
 
+.img-showcase--lightbox .picture__prime{
+  width: 550px;
+  height: 550px;
+  border-radius: 15px;
+}
+
 .pictures__prime-button{
   position: relative;
   display: block;
@@ -714,4 +720,129 @@ color:  var(--text-color-dark);
 .about-company-footer__basket{
   display: inline-block;
   margin-right: 15px;
-  }
+}
+
+
+.img-showcase{
+  position: relative;
+  z-index: 1;
+}
+
+.lightshot{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  border-radius: 15px;
+  cursor: zoom-in;
+}
+
+
+/* LIGHTSHOT */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 24px;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: auto;
+}
+
+.lightbox--open{
+  display: block;
+}
+
+.lightbox__close-icon{
+  display: block;
+  width: 20px;
+  height: 20px;
+
+}
+
+.lightbox__inner {
+  width: 100%;
+  max-width: 550px;
+  margin: 90px auto;
+}
+
+.lightbox__close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  margin-left: auto;
+  background-color: transparent;
+  cursor: pointer;
+  color: #d8d8d8;
+}
+
+.lightbox__close:hover{
+  color:  var(--accent-color);
+}
+
+.lightbox__close:active{
+  opacity: 0.6;
+}
+
+.lightbox__list{
+  justify-content: center;
+  max-width: 550px;
+}
+
+.pictures__controls {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--text-color-dark);
+  cursor: pointer;
+}
+
+.pictures__controls:hover{
+  color: var(--accent-color);
+}
+
+.pictures__controls:active{
+  opacity: 0.6;
+}
+
+.img-showcase__control-inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #fff;
+
+}
+
+.pictures__controls--prev {
+  right: -28px;
+
+}
+
+.img-showcase__control {
+  display: block;
+  width: 13px;
+  height: 20px;
+}
+
+.pictures__controls--next {
+  left: -28px;
+
+}
