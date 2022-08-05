@@ -781,6 +781,7 @@ color:  var(--text-color-dark);
   padding: 0;
   border: 0;
   margin-left: auto;
+  margin-bottom: 24px;
   background-color: transparent;
   cursor: pointer;
   color: #d8d8d8;

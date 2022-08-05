@@ -24,8 +24,31 @@ elsPicturesPrimeButton.forEach(function (elButton) {
     elButton.parentElement.classList.add("pictures__item--active");
 
     elPicturePrime.src = elButton.dataset.elPicturesBog;
-    elPicturePrime.srcset ='${elButton.dataset.imgPicturesBog} 1x, ${elButton.dataset.imgPicturesRetina} 2x';
+    elPicturePrime.srcset = '${elButton.dataset.imgPicturesBog} 1x, ${elButton.dataset.imgPicturesRetina} 2x';
 
   });
 
 });
+
+
+// LIGHTBOX
+
+const elLightshotToggler = document.querySelector(".js-lightshot-toggler");
+const elLightBox = document.querySelector(".lightbox");
+const elLightboxClose = document.querySelector(".js-lightbox-close");
+
+if (elLightshotToggler) {
+  elLightshotToggler.addEventListener('click', function () {
+    elLightBox.classList.add("lightbox--open");
+
+  });
+
+}
+
+if (elLightboxClose) {
+  elLightboxClose.addEventListener('click', function () {
+    elLightBox.classList.remove("lightbox--open");
+
+  });
+
+}
